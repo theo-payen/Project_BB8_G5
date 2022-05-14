@@ -1,4 +1,4 @@
-GroupName = "Admin_creat_groups"
+$GroupName = "Admin_creat_groups"
 $AllowGroupCreation = $False
 
 Connect-AzureAD
