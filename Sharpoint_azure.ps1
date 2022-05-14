@@ -8,12 +8,13 @@ function prerequis {
 }
 
 function connection {
-    Connect-SPOService -Url'https://g5esgi.sharepoint.com'
+    Connect-SPOService -url 'https://g5esgi-admin.sharepoint.com'
     Connect-AzureAD
 }
 function main {
-    prerequis
-    connection
+    #prerequis
+    #connection
+    Get-SPOSite | Out-GridView
     Get-AzureADUser | ForEach-Object {
         $UserPrincipalName = $($_.UserPrincipalName)
         $Department = $($_.Department)
@@ -21,7 +22,7 @@ function main {
         if ($Department -ne $null){
             write-Host "$UserPrincipalName $Department"
 
-            Get-SPOSite
+            
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
 
         }
