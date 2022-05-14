@@ -21,8 +21,7 @@ function main {
         
         if ($Department -ne $null){
             write-Host "$UserPrincipalName $Department"
-
-            
+            Add-SPOUser -Site 'https://g5esgi.sharepoint.com' -LoginName $UserPrincipalName -Group $Department
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
 
         }
