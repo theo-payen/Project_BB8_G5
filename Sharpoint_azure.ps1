@@ -12,23 +12,28 @@ function connection {
     Connect-AzureAD
 }
 function main {
+    param (
+        $Department,
+        $url
+    )
     #prerequis
     #connection
     Get-SPOSite | Out-GridView
     Get-AzureADUser | ForEach-Object {
         $UserPrincipalName = $($_.UserPrincipalName)
-        $Department = $($_.Department)
+        $Department_USER = $($_.Department)
         
-        if ($Department -ne $null){
-            write-Host "$UserPrincipalName $Department"
-            Add-SPOUser -Site 'https://g5esgi.sharepoint.com' -LoginName $UserPrincipalName -Group $Department
+        if ($Department_USER -eq $Department){
+            write-Host "$UserPrincipalName $Department_USER"
+            Add-SPOUser -Site $url -LoginName $UserPrincipalName -Group $Department_USER
+
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
 
         }
     }    
 }
 
-main
+main -Department "IT" -url "https://g5esgi.sharepoint.com/sites/IT"
 
 
 #   t.payen@g5esgi.onmicrosoft.com
