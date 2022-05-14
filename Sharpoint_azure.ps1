@@ -1,15 +1,14 @@
 # prérequis
 function prerequis {
-    
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    
+
+    Import-Module Microsoft.Online.Sharepoint.PowerShell
     # install Azure AD
     Install-Module AzureAD -Force
     Import-Module AzureAD
 }
 
 function connection {
-    Connect-SPOService –url https://g5esgi.sharepoint.com
+    Connect-SPOService -Url'https://g5esgi.sharepoint.com'
     Connect-AzureAD
 }
 function main {
