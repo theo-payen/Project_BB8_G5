@@ -1,6 +1,6 @@
 # prérequis
 function prerequis {
-
+    #https://www.microsoft.com/fr-FR/download/details.aspx?id=35588
     Import-Module Microsoft.Online.Sharepoint.PowerShell
     # install Azure AD
     Install-Module AzureAD -Force
@@ -20,7 +20,7 @@ function main {
         
         if ($Department -ne $null){
             write-Host "$UserPrincipalName $Department"
-            
+
             Get-SPOSite
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
 
