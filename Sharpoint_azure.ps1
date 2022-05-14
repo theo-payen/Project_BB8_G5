@@ -1,7 +1,7 @@
 # prérequis
 function prerequis {
-    Install-Module MicrosoftTeams
-    Install-Module MSOnline
+    
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
     
     # install Azure AD
     Install-Module AzureAD -Force
@@ -9,7 +9,7 @@ function prerequis {
 }
 
 function connection {
-    Connect-MicrosoftTeams 
+    Connect-SPOService –url https://g5esgi.sharepoint.com
     Connect-AzureAD
 }
 function main {
@@ -21,9 +21,9 @@ function main {
         
         if ($Department -ne $null){
             write-Host "$UserPrincipalName $Department"
-            $team = Get-Team -DisplayName $Department 
+            Get-SPOSite
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
-            Add-TeamUser -GroupId $team.GroupId -User $UserPrincipalName
+
         }
     }    
 }
