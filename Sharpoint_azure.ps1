@@ -20,6 +20,7 @@ function main {
         
         if ($Department -ne $null){
             write-Host "$UserPrincipalName $Department"
+            
             Get-SPOSite
             write-Host "Ajoute l'utilisateur $UserPrincipalName"
 
