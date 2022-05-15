@@ -23,9 +23,13 @@ function main {
         # récupère le departement de l'utilisateur
         $Department = $($_.Department)
         # récupère l'equipe teams avec le meme nom de departement
-        if (Get-team -DisplayName $Department -eq $null){
+        $team = Get-team -DisplayName $Department
+        # crée l'equipe si elle n'existe pas
+        if ($team -eq $null){
             write-host "crée l'equipe $Department"
             new-Team -DisplayName $Department
+        }else{
+            write-host "l'equipe $Department existe deja"
         }
     }   
 }
