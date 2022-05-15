@@ -1,5 +1,5 @@
-Install-Module AzureAD -Force
-Import-Module AzureAD
+Install-Module AzureADPreview -Force
+Import-Module AzureADPreview
 
 $GroupName = "Admin_creat_groups"
 $AllowGroupCreation = $False
