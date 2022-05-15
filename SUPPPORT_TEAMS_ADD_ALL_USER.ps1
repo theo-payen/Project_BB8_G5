@@ -27,7 +27,7 @@ function main {
         # verrifie si le departement est non null
         write-Host "$UserPrincipalName $Department"
         # récupère l'equipe teams avec le meme nom de departement
-        $team = Get-Team -DisplayName "SUPPPORT_TEAMS_ADD_ALL_USER"
+        $team = Get-Team -DisplayName "SUPPORT_INFORMATIQUE"
         write-Host "Ajoute l'utilisateur $UserPrincipalName"
         # puis ajoute l'utilisateur dans l'equipe
         Add-TeamUser -GroupId $team.GroupId -User $UserPrincipalName
