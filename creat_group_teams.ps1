@@ -27,6 +27,7 @@ function main {
         # crée l'equipe si elle n'existe pas
         if ($team -eq $null){
             write-host "crée l'equipe $Department"
+            # crée la nouvelle equipe
             new-Team -DisplayName $Department
         }else{
             write-host "l'equipe $Department existe deja"
