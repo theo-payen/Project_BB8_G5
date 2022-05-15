@@ -34,7 +34,3 @@ function main {
 }
 
 main -Department "IT" -url "https://g5esgi.sharepoint.com/sites/IT"
-
-
-#   t.payen@g5esgi.onmicrosoft.com
-#   Azerty@77
