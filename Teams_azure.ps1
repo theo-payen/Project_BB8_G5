@@ -37,7 +37,3 @@ function main {
 }
 
 main
-
-
-#   t.payen@g5esgi.onmicrosoft.com
-#   Azerty@77
