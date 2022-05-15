@@ -1,12 +1,12 @@
 # prérequis
 function prerequis {
     # installe les modules requis pour la bon fonctionnement du script
-    Install-Module MicrosoftTeams
-    Install-Module MSOnline
+    Install-Module MicrosoftTeams -Force
+    Install-Module MSOnline -Force
     
     # install Azure AD
     Install-Module AzureAD -Force
-    Import-Module AzureAD
+    Import-Module AzureAD -Force
 }
 
 function connection {
