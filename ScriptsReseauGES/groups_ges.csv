@@ -1,5 +1,0 @@
-Name;Path;Scope;Type
-DirectionGES;OU=Groups,OU=France,OU=ReseauGES,DC=reseau-ges,DC=local;DomainLocal;Security
-PedagogiqueGES;OU=Groups,OU=France,OU=ReseauGES,DC=reseau-ges,DC=local;DomainLocal;Security
-EntreprisesGES;OU=Groups,OU=France,OU=ReseauGES,DC=reseau-ges,DC=local;DomainLocal;Security
-ITGES;OU=Groups,OU=France,OU=ReseauGES,DC=reseau-ges,DC=local;DomainLocal;Security
